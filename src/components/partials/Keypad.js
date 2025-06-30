@@ -30,7 +30,7 @@ export default function Keypad() {
         {/* 고대비 */}
         <div className={styles.item}>
           <button type="button" onClick={() => setHighContrast(!highContrast)}>
-            <span>고대비</span>
+            <span data-lang-code="고대비">고대비</span>
             <strong>{highContrast ? "켜짐" : "꺼짐"}</strong>
           </button>
         </div>
@@ -38,7 +38,7 @@ export default function Keypad() {
         {/* 낮은자세 */}
         <div className={styles.item}>
           <button type="button" onClick={() => setLowPosture(!lowPosture)}>
-            <span>낮은자세</span>
+            <span data-lang-code="낮은자세">낮은자세</span>
             <strong>{lowPosture ? "켜짐" : "꺼짐"}</strong>
           </button>
         </div>
@@ -91,7 +91,7 @@ export default function Keypad() {
             type="button"
             onClick={() => setOpenKey(openKey === "volume" ? null : "volume")}
           >
-            <span>음성크기</span>
+            <span data-lang-code="음성크기">음성크기</span>
             <strong>{voiceVolume}</strong>
           </button>
           {openKey === "volume" && (
@@ -120,7 +120,7 @@ export default function Keypad() {
             type="button"
             onClick={() => setOpenKey(openKey === "speed" ? null : "speed")}
           >
-            <span>음성속도</span>
+            <span data-lang-code="음성속도">음성속도</span>
             <strong>{`x${voiceSpeed}`}</strong>
           </button>
           {openKey === "speed" && (
@@ -149,7 +149,7 @@ export default function Keypad() {
             type="button"
             onClick={() => setOpenKey(openKey === "font" ? null : "font")}
           >
-            <span>글씨크기</span>
+            <span data-lang-code="글씨크기">글씨크기</span>
             <strong>
               {fontSize === 62.5
                 ? "x1"

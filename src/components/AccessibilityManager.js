@@ -9,23 +9,14 @@ export default function AccessibilityManager() {
   const language = useStore((state) => state.language);
   const fontSize = useStore((state) => state.fontSize);
 
-  // Update classes on html element
   useEffect(() => {
     const html = document.documentElement;
-
-    // high contrast
     html.classList.toggle("contrast", highContrast);
-
-    // low posture
     html.classList.toggle("low", lowPosture);
-
-    // language class (except default 'ko')
     html.classList.remove("en", "jp", "zh");
     if (language !== "ko") {
       html.classList.add(language);
     }
-
-    // font size classes
     html.classList.remove("font_65", "font_69");
     if (fontSize === 65) {
       html.classList.add("font_65");
@@ -34,7 +25,6 @@ export default function AccessibilityManager() {
     }
   }, [highContrast, lowPosture, language, fontSize]);
 
-  // Update text contents according to language
   useEffect(() => {
     const map = { ko: "KO", en: "EN", jp: "JP", zh: "CH" };
     const key = map[language];
