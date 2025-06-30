@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./Keypad.module.scss";
 import { useStore } from "../../../src/store/useStore";
+import useTranslate from "@/hooks/useTranslate";
 
 export default function Keypad() {
   const hydrated = useStore((state) => state.hydrated);
@@ -18,6 +19,8 @@ export default function Keypad() {
   const fontSize = useStore((state) => state.fontSize);
   const setFontSize = useStore((state) => state.setFontSize);
 
+  const t = useTranslate();
+
   const [openKey, setOpenKey] = useState(null);
 
   if (!hydrated) {
@@ -31,7 +34,7 @@ export default function Keypad() {
         <div className={styles.item}>
           <button type="button" onClick={() => setHighContrast(!highContrast)}>
             <span data-lang-code="고대비">고대비</span>
-            <strong>{highContrast ? "켜짐" : "꺼짐"}</strong>
+            <strong>{t(highContrast ? "켜짐" : "꺼짐")}</strong>
           </button>
         </div>
 
@@ -39,7 +42,7 @@ export default function Keypad() {
         <div className={styles.item}>
           <button type="button" onClick={() => setLowPosture(!lowPosture)}>
             <span data-lang-code="낮은자세">낮은자세</span>
-            <strong>{lowPosture ? "켜짐" : "꺼짐"}</strong>
+            <strong>{t(lowPosture ? "켜짐" : "꺼짐")}</strong>
           </button>
         </div>
 
