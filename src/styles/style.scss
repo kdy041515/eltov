@@ -30,8 +30,19 @@
     src: url('https://cdn.jsdelivr.net/gh/fonts-archive/NEXONLv1Gothic/NEXONLv1Gothic-Bold.woff2') format('woff2'),
          url('https://cdn.jsdelivr.net/gh/fonts-archive/NEXONLv1Gothic/NEXONLv1Gothic-Bold.woff') format('woff'),
 }
-html{font-family: 'NEXON Lv1 Gothic';}
+html{font-family: 'NEXON Lv1 Gothic';font-size:62.5%;}
 body{font-size:1.7rem;}
+html.contrast{
+    filter: contrast(1.5);
+}
+html.low{
+    scroll-behavior: smooth;
+}
+html.en, html.jp, html.zh{
+    font-family: 'NEXON Lv1 Gothic';
+}
+html.font_65{font-size:65%;}
+html.font_69{font-size:69%;}
 *:focus{ outline-offset: 1px;outline:3px dashed rgb(244, 122, 0);}
 ::selection {background: #04a145;color: #fff;}
 .sound_only {position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;overflow: hidden;clip: rect(0, 0, 0, 0);border: 0;white-space: nowrap;}
