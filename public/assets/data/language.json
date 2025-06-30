@@ -1,0 +1,94 @@
+[
+    {
+        "code": "메뉴air",
+        "KO": "에어",
+        "JP": "エアー",
+        "CH": "空气",
+        "EN": "AIR"
+    },
+    {
+        "code": "메뉴kiosk",
+        "KO": "배리어프리 키오스크",
+        "JP": "バリアフリーキオスク",
+        "CH": "无障碍亭",
+        "EN": "Barrier Free Kiosk"
+    },
+    {
+        "code": "메뉴way",
+        "KO": "길찾기",
+        "JP": "ウェイファインディング",
+        "CH": "导向",
+        "EN": "Wayfinding"
+    },
+    {
+        "code": "메뉴media",
+        "KO": "영상 랜드마크",
+        "JP": "メディアランドマーク",
+        "CH": "媒体地标",
+        "EN": "Media Landmark"
+    },
+    {
+        "code": "메뉴hw",
+        "KO": "키오스크 H/W",
+        "JP": "キオスクH/W",
+        "CH": "亭硬件",
+        "EN": "Kiosk H/W"
+    },
+    {
+        "code": "메뉴references",
+        "KO": "포트폴리오",
+        "JP": "リファレンス",
+        "CH": "参考",
+        "EN": "References"
+    },
+    {
+        "code": "메뉴about",
+        "KO": "회사소개",
+        "JP": "会社概要",
+        "CH": "关于我们",
+        "EN": "About us"
+    },
+    {
+        "code": "메뉴singapore",
+        "KO": "엘토브 싱가포르",
+        "JP": "elTOVシンガポール",
+        "CH": "elTOV新加坡",
+        "EN": "elTOV Singapore"
+    },
+    {
+        "code": "접근성고대비",
+        "KO": "고대비",
+        "JP": "ハイコントラスト",
+        "CH": "高对比度",
+        "EN": "High Contrast"
+    },
+    {
+        "code": "접근성낮은자세",
+        "KO": "낮은자세",
+        "JP": "低い姿勢",
+        "CH": "低姿势",
+        "EN": "Low Posture"
+    },
+    {
+        "code": "접근성음성크기",
+        "KO": "음성크기",
+        "JP": "音声の大きさ",
+        "CH": "语音音量",
+        "EN": "Voice Volume"
+    },
+    {
+        "code": "접근성음성속도",
+        "KO": "음성속도",
+        "JP": "音声速度",
+        "CH": "语音速度",
+        "EN": "Voice Speed"
+    },
+    {
+        "code": "접근성글씨크기",
+        "KO": "글씨크기",
+        "JP": "文字サイズ",
+        "CH": "字体大小",
+        "EN": "Font Size"
+    }
+]
+           
