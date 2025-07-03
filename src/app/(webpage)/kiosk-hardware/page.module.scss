@@ -1,0 +1,15 @@
+.category_tap ul {
+  display: flex;
+  gap: 10px;
+}
+
+.gall_list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gall_list .thum img {
+  width: 100%;
+  display: block;
+}
