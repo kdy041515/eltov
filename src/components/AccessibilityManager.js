@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useStore } from "@/store/useStore";
 import languageData from "@/../public/assets/data/language.json" assert { type: "json" };
 
@@ -8,6 +9,7 @@ export default function AccessibilityManager() {
   const lowPosture = useStore((state) => state.lowPosture);
   const language = useStore((state) => state.language);
   const fontSize = useStore((state) => state.fontSize);
+  const pathname = usePathname();
 
   useEffect(() => {
     const html = document.documentElement;
@@ -37,7 +39,7 @@ export default function AccessibilityManager() {
         el.textContent = entry[key];
       }
     });
-  }, [language]);
+  }, [language, pathname]);
 
   return null;
 }
