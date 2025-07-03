@@ -1,15 +1,16 @@
 "use client";
 import { useEffect, useState } from 'react';
 
-const API_BASE = 'https://eltov.com/home/wp-json/wp/v2';
+const API_BASE = 'http://eltov.com/home/wp-json/wp/v2';
 
 export default function ReferenceDetail({ params }) {
   const { slug } = params;
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetch(`${API_BASE}/posts?slug=${slug}&_embed`)
-      .then((res) => res.json())
+    const url = `${API_BASE}/posts?slug=${encodeURIComponent(slug)}&_embed`;
+    fetch(url)
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then((data) => setPost(data && data.length ? data[0] : null))
       .catch((err) => console.error(err));
   }, [slug]);

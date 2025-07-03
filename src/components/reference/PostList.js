@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const API_BASE = 'https://eltov.com/home/wp-json/wp/v2';
+const API_BASE = 'http://eltov.com/home/wp-json/wp/v2';
 
 export default function PostList({ category }) {
   const [posts, setPosts] = useState([]);
@@ -11,7 +11,7 @@ export default function PostList({ category }) {
     let url = `${API_BASE}/posts?_embed`;
     if (category) url += `&categories=${category}`;
     fetch(url)
-      .then((res) => res.json())
+      .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then((data) => setPosts(Array.isArray(data) ? data : []))
       .catch((err) => console.error(err));
   }, [category]);
