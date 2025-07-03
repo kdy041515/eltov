@@ -1,7 +1,8 @@
 "use client";
 import SubVisual from "@/components/partials/subVisual/SubVisual";
-import CategoryList from "@/components/reference/CategoryList";
-import PostList from "@/components/reference/PostList";
+import CategoryList from "@/components/common/CategoryList";
+import PostList from "@/components/common/PostList";
+import { endpoints } from '@/api/endpoints';
 import { useSearchParams } from 'next/navigation';
 import useTranslate from '@/hooks/useTranslate';
 
@@ -18,8 +19,21 @@ export default function References() {
         />
 
         <div className="container">
+            <div className="category_tap">
+                <h3>{translate("카테고리타이틀")}</h3>
+                <CategoryList
+                    endpoint={endpoints.references.categories}
+                    current={category}
+                    linkBuilder={(cat) => `/references?cat=${cat.id}`}
+                />
+            </div>
+
             <div className="gall_list">
-                <PostList category={category} />
+                <PostList
+                    endpoint={endpoints.references.posts}
+                    category={category}
+                    linkBuilder={(post) => `/references/${post.slug}`}
+                />
             </div>
         </div>
         </>
