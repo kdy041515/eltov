@@ -1,18 +1,17 @@
 'use client';
 
-import styles from "./Subvisual.module.scss";
+import styles from './Subvisual.module.scss';
+import useTranslate from '@/hooks/useTranslate';
 
-export default function SubVisual() {
-    return (
-        <div className={style.sub_page_title}
-            style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')",
-            }}
-        >
-            <h2>포트폴리오</h2>
-            <div className={style.sub}></div>
-        </div>
-    );
+export default function SubVisual({ image, titleCode, subtextCode }) {
+  const translate = useTranslate();
+  return (
+    <div
+      className={styles.sub_page_title}
+      style={{ backgroundImage: `url('${image}')` }}
+    >
+      <h2>{translate(titleCode)}</h2>
+      <div className={styles.sub}>{translate(subtextCode)}</div>
+    </div>
+  );
 }
-
-

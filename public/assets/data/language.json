@@ -145,6 +145,20 @@
         "JP": "elTOV 顧客",
         "CH": "elTOV 客户",
         "EN": "elTOV Clients"
+    },
+    {
+        "code": "포트폴리오타이틀",
+        "KO": "포트폴리오",
+        "JP": "リファレンス",
+        "CH": "参考",
+        "EN": "References"
+    },
+    {
+        "code": "포트폴리오서브타이틀",
+        "KO": "엘토브의 프로젝트 사례",
+        "JP": "エルトブのプロジェクト事例",
+        "CH": "elTOV 项目案例",
+        "EN": "Projects by elTOV"
     }
 ]
            
