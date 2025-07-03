@@ -2,13 +2,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const API_BASE = 'https://eltov.com/home/wp-json/wp/v2';
+const API_BASE = 'http://eltov.com/home/index.php?rest_route=/wp/v2/pages/';
 
 export default function PostList({ category }) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    let url = `${API_BASE}/posts?_embed`;
+    let url = `${API_BASE}`;
     if (category) url += `&categories=${category}`;
     fetch(url)
       .then((res) => res.json())
