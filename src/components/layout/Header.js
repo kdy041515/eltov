@@ -1,5 +1,6 @@
 'use client';
-import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
 export default function Header() {
     return (
         <>
@@ -11,13 +12,13 @@ export default function Header() {
                     </div>
                     <div id="nav">
                         <ul>
-                            <li><a href="#" data-lang-code="메뉴air">에어</a></li>
-                            <li><a href="#" data-lang-code="메뉴kiosk">배리어프리 키오스크</a></li>
-                            <li><a href="#" data-lang-code="메뉴way">길찾기</a></li>
-                            <li><a href="#" data-lang-code="메뉴media">영상 랜드마크</a></li>
-                            <li><a href="#" data-lang-code="메뉴hw">키오스크 H/W</a></li>
-                            <li><a href="#" data-lang-code="메뉴references">포트폴리오</a></li>
-                            <li><a href="#" data-lang-code="메뉴about">회사소개</a></li>
+                            <li><Link href="#" data-lang-code="메뉴air">에어</Link></li>
+                            <li><Link href="#" data-lang-code="메뉴kiosk">배리어프리 키오스크</Link></li>
+                            <li><Link href="#" data-lang-code="메뉴way">길찾기</Link></li>
+                            <li><Link href="#" data-lang-code="메뉴media">영상 랜드마크</Link></li>
+                            <li><Link href="#" data-lang-code="메뉴hw">키오스크 H/W</Link></li>
+                            <li><Link href="/references" data-lang-code="메뉴references">포트폴리오</Link></li>
+                            <li><Link href="#" data-lang-code="메뉴about">회사소개</Link></li>
                         </ul>
                     </div>
                     <div className="sp">

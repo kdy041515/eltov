@@ -138,6 +138,13 @@
         "JP": "オフ",
         "CH": "关",
         "EN": "Off"
+    },
+    {
+        "code": "엘토브고객사",
+        "KO": "엘토브 고객사",
+        "JP": "elTOV 顧客",
+        "CH": "elTOV 客户",
+        "EN": "elTOV Clients"
     }
 ]
            
