@@ -159,6 +159,40 @@
         "JP": "エルトブのプロジェクト事例",
         "CH": "elTOV 项目案例",
         "EN": "Projects by elTOV"
+    },
+    {
+        "code": "회사명엘토브",
+        "KO": "(주)엘토브",
+        "JP": "株式会社エルトブ",
+        "CH": "（株）elTOV",
+        "EN": "elTOV Co., Ltd."
+    },
+    {
+        "code": "대표자명",
+        "KO": "대표: 김지성 김지훈",
+        "JP": "代表：キム・ジソン、キム・ジフン",
+        "CH": "代表：金智成、金智勋",
+        "EN": "CEO: Jisung Kim, Jihoon Kim"
+    },
+    {
+        "code": "사업자번호",
+        "KO": "사업자번호",
+        "JP": "事業者番号",
+        "CH": "营业执照号",
+        "EN": "Business Registration Number"
+    },
+    {
+        "code": "연락처",
+        "KO": "연락처",
+        "JP": "連絡先",
+        "CH": "联系方式",
+        "EN": "Contact"
+    },
+    {
+        "code": "카테고리타이틀",
+        "KO": "카테고리",
+        "JP": "カテゴリ",
+        "CH": "类别",
+        "EN": "Category"
     }
 ]
-           
