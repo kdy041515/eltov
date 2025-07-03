@@ -1,6 +1,7 @@
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-import Keypad from '../components/partials/Keypad';
+import Keypad from '../components/partials/keypad/Keypad';
+import Clients from '../components/partials/client/Clients';
 import AccessibilityManager from '../components/AccessibilityManager';
 import '@/styles/reset.scss';
 import '@/styles/style.scss';
@@ -29,6 +30,7 @@ export default async function RootLayout({ children }) {
                             {children}
                         </div>
                         {<Keypad/>}
+                        {<Clients/>}
                         {<Footer/>}
                     </div>
                     <div id="portal"></div>
