@@ -18,11 +18,6 @@ export default function References() {
         />
 
         <div className="container">
-            <div className="category_tap">
-                <h3>{translate("카테고리타이틀")}</h3>
-                <CategoryList current={category} />
-            </div>
-
             <div className="gall_list">
                 <PostList category={category} />
             </div>

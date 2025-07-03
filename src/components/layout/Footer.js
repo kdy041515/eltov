@@ -13,7 +13,7 @@ export default function Footer() {
                 <div id="ft_nav">
                     <ul>
                         <li><Link href="#">{translate("메뉴air")}</Link></li>
-                        <li><Link href="#">{translate("메뉴air")}</Link></li>
+                        <li><Link href="#">{translate("메뉴kiosk")}</Link></li>
                         <li><Link href="#">{translate("메뉴way")}</Link></li>
                         <li><Link href="#">{translate("메뉴media")}</Link></li>
                         <li><Link href="#">{translate("메뉴hw")}</Link></li>
