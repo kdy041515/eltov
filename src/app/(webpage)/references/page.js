@@ -1,11 +1,14 @@
 "use client";
 import SubVisual from "@/components/partials/subVisual/SubVisual";
-import Link from 'next/link';
-import styles from "./page.module.scss";
+import CategoryList from "@/components/reference/CategoryList";
+import PostList from "@/components/reference/PostList";
+import { useSearchParams } from 'next/navigation';
 import useTranslate from '@/hooks/useTranslate';
 
 export default function References() {
     const translate = useTranslate();
+    const searchParams = useSearchParams();
+    const category = searchParams.get('cat');
     return (
         <>
         <SubVisual
@@ -17,25 +20,11 @@ export default function References() {
         <div className="container">
             <div className="category_tap">
                 <h3>{translate("카테고리타이틀")}</h3>
-                <ul>
-                    <li><Link href="#">카테고리명</Link></li>
-                </ul>
+                <CategoryList current={category} />
             </div>
 
             <div className="gall_list">
-                <ul>
-                    <li>
-                        <Link href="#">
-                            <div className="thum">
-                                <img src="" alt="" />
-                            </div>
-                            <div className="cnt">
-                                <div className="tit"></div>
-                                <div className="desc"></div>
-                            </div>
-                        </Link>
-                    </li>
-                </ul>
+                <PostList category={category} />
             </div>
         </div>
         </>
