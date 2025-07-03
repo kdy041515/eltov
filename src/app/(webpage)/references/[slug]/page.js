@@ -1,16 +1,32 @@
 "use client";
 import { useEffect, useState } from 'react';
 
-const API_BASE = 'https://eltov.com/home/wp-json/wp/v2';
+import { endpoints } from '@/api/endpoints';
 
 export default function ReferenceDetail({ params }) {
   const { slug } = params;
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetch(`${API_BASE}/posts?slug=${slug}&_embed`)
-      .then((res) => res.json())
-      .then((data) => setPost(data && data.length ? data[0] : null))
+    fetch(endpoints.references.feed)
+      .then((res) => res.text())
+      .then((xmlStr) => {
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(xmlStr, 'text/xml');
+        const items = Array.from(xml.querySelectorAll('item'));
+        const item = items.find((it) => {
+          const link = it.querySelector('link')?.textContent || '';
+          return link.includes(slug);
+        });
+        if (!item) return;
+        setPost({
+          title: item.querySelector('title')?.textContent || '',
+          content:
+            item.querySelector('content\\:encoded')?.textContent ||
+            item.querySelector('description')?.textContent || '',
+          media: item.querySelector('enclosure')?.getAttribute('url') || '',
+        });
+      })
       .catch((err) => console.error(err));
   }, [slug]);
 
@@ -18,13 +34,11 @@ export default function ReferenceDetail({ params }) {
     return <div className="container">Loading...</div>;
   }
 
-  const media = post._embedded?.['wp:featuredmedia']?.[0]?.source_url;
-
   return (
     <div className="container">
-      <h1 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-      {media && <img src={media} alt={post.title.rendered} />}
-      <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+      <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+      {post.media && <img src={post.media} alt={post.title} />}
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
     </div>
   );
 }
