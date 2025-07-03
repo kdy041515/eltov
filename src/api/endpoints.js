@@ -1,4 +1,4 @@
-export const API_BASE = 'https://eltov.com/home';
+export const API_BASE = 'http://eltov.com/home';
 
 export const endpoints = {
   references: {
@@ -6,9 +6,9 @@ export const endpoints = {
     posts: `${API_BASE}/wp-json/wp/v2/posts?_embed`,
   },
   portfolio: {
-    feed: `${API_BASE}/?post_type=portfolio_page&feed=rss2`,
+    feed: `${API_BASE}/?post_type=portfolio_page&feed=rss2&portfolio_category=interactive-contents`,
   },
   kioskHardware: {
-    feed: `${API_BASE}/?post_type=kiosk_page&feed=rss2`,
+    feed: `${API_BASE}/?post_type=portfolio_page&feed=rss2&portfolio_category=kiosk-2`,
   },
 };
