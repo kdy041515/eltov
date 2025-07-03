@@ -2,11 +2,13 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
+import useTranslate from '@/hooks/useTranslate';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import styles from "./Clients.module.scss";
 
 export default function Clients() {
+    const translate = useTranslate();
     const clientImages = [
         { src: 'https://www.tov.com.sg/public/img/trustedby/changi.png',      alt: 'Changi' },
         { src: 'https://www.tov.com.sg/public/img/trustedby/jewel.png',       alt: 'Jewel' },
@@ -61,7 +63,7 @@ export default function Clients() {
     return (
         <div id="clients" className={styles.clients}>
             <div className={styles.clients_inner}>
-                <h3 className={styles.clients_title} data-lang-code="엘토브고객사">엘토브 고객사</h3>
+                <h3 className={styles.clients_title}>{translate("엘토브고객사")}</h3>
                 <div className={styles.clients_slider}>
                     <Swiper
                         modules={[Autoplay, FreeMode]}

@@ -58,10 +58,12 @@ html.font_69{font-size:69%;}
     .header_inner {
         position: relative;;padding:25px 30px;display:flex;align-items: center;background-color: #fff;border-radius:10px;box-shadow:0 0 15px rgba(0,0,0,.1);
         #logo {
-            display: flex;align-items: center;gap:15px;
-            img{
-                &#logo_ci{width:25px;}
-                &#logo_text{width:140px;}
+            a{
+                display: flex;align-items: center;gap:15px;
+                img{
+                    &#logo_ci{width:25px;}
+                    &#logo_text{width:140px;}
+                }
             }
         }
         #nav {
