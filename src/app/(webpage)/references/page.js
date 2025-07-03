@@ -22,17 +22,17 @@ export default function References() {
             <div className="category_tap">
                 <h3>{translate("카테고리타이틀")}</h3>
                 <CategoryList
-                    endpoint={endpoints.references.categories}
+                    endpoint={endpoints.references.feed}
                     current={category}
-                    linkBuilder={(cat) => `/references?cat=${cat.id}`}
+                    linkBuilder={(cat) => `/references?cat=${cat.name}`}
                 />
             </div>
 
             <div className="gall_list">
                 <PostList
-                    endpoint={endpoints.references.posts}
+                    endpoint={endpoints.references.feed}
                     category={category}
-                    linkBuilder={(post) => `/references/${post.slug}`}
+                    linkBuilder={(post) => post.link}
                 />
             </div>
         </div>
