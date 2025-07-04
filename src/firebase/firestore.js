@@ -1,6 +1,11 @@
 import { collection, getDocs, getDoc, doc, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebaseConfig';
 
+export async function getPortfolioCategories() {
+  const snapshot = await getDocs(collection(db, 'portfolio_category'));
+  return snapshot.docs.map(d => ({ id: d.id, ...d.data() }));
+}
+
 export async function getPortfolios() {
   const snapshot = await getDocs(collection(db, 'portfolio'));
   return snapshot.docs.map(d => ({ id: d.id, ...d.data() }));

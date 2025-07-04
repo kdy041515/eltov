@@ -35,11 +35,11 @@
         "EN": "Kiosk H/W"
     },
     {
-        "code": "메뉴references",
+        "code": "메뉴portfolio",
         "KO": "포트폴리오",
         "JP": "リファレンス",
         "CH": "参考",
-        "EN": "References"
+        "EN": "portfolio"
     },
     {
         "code": "메뉴about",
@@ -151,7 +151,7 @@
         "KO": "포트폴리오",
         "JP": "リファレンス",
         "CH": "参考",
-        "EN": "References"
+        "EN": "portfolio"
     },
     {
         "code": "포트폴리오서브타이틀",
@@ -208,5 +208,13 @@
         "JP": "カテゴリを選択",
         "CH": "选择分类",
         "EN": "Select Category"
+    }
+    ,
+     {
+        "code": "전체",
+        "KO": "전체",
+        "JP": "すべて",
+        "CH": "全部",
+        "EN": "All"
     }
 ]

@@ -1,11 +1,17 @@
 "use client";
 import SubVisual from "@/components/partials/subVisual/SubVisual";
 import CategoryList from "@/components/partials/board/CategoryList";
-import PostList from "@/components/partials/board/GallList";
+import GallList from "@/components/partials/board/GallList";
 import useTranslate from '@/hooks/useTranslate';
+import { useEffect, useState } from 'react';
+import { getKiosks } from '@/firebase/firestore';
 
 export default function KioskHardware() {
   const translate = useTranslate();
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    getKiosks().then(setItems).catch(console.error);
+  }, []);
   return (
     <>
       <SubVisual
@@ -16,7 +22,7 @@ export default function KioskHardware() {
 
        <div id="sub_content" className="container">
           <CategoryList/>
-          <PostList/>
+          <GallList items={items}/>
       </div>
     </>
   );
