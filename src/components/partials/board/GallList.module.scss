@@ -1,0 +1,35 @@
+.gall_list{
+    ul{
+        display:grid;grid-template-columns:repeat(3,1fr);gap:35px 25px;
+        li{
+            a{
+                display: block;
+                &:hover{
+                    .thum{
+                        img{
+                            transform:translate(-50%,-50%) scale(1.1);opacity: 0.8;
+                        }
+                    }
+                }
+            }
+            .thum{
+                overflow: hidden;position: relative;padding-top:65%;
+                img{
+                    width:100%;height:auto;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);object-fit: cover;transition:transform .3s;
+                }
+            }
+            .cnt{
+                margin-top:10px;
+                .tit{
+                    font-size:1.7rem;font-weight:700;
+                    & + .desc{
+                        margin-top:5px;
+                    }
+                }
+                .desc{
+                    font-size:1.4rem;color:#777;word-break: keep-all;
+                }
+            }
+        }
+    }
+}
