@@ -11,7 +11,6 @@ export default function CategoryList({ categories, selectedCategory, handleCateg
       <ul>
         {categories.map((category, index) => (
           <li key={index}>
-            {console.log(categories)}
             <Link
               href="#"
               className={category === selectedCategory ? 'active' : ''}
