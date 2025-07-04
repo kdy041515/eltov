@@ -19,7 +19,10 @@ export default function CategoryList({
           <Link
             href="#"
             className={selectedCategory === "전체" ? "active" : ""}
-            onClick={() => handleCategoryChange("전체")}
+            onClick={(e) => {
+              e.preventDefault();
+              handleCategoryChange("전체");
+            }}
           >
             {translate("전체")}
           </Link>
@@ -29,7 +32,10 @@ export default function CategoryList({
             <Link
               href="#"
               className={category.code === selectedCategory ? "active" : ""}
-              onClick={() => handleCategoryChange(category.code)}
+              onClick={(e) => {
+                e.preventDefault();
+                handleCategoryChange(category.code);
+              }}
             >
               {language === "ko"
                 ? category.ko

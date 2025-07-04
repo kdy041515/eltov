@@ -5,18 +5,29 @@ import useTranslate from "@/hooks/useTranslate";
 import SubVisual from "@/components/partials/subVisual/SubVisual";
 import CategoryList from "@/components/partials/board/CategoryList";
 import GallList from "@/components/partials/board/GallList";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function KioskList() {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("전체");
   const translate = useTranslate();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   useEffect(() => {
     getKiosks().then(setItems).catch(console.error);
     getKioskCategories().then(setCategories).catch(console.error);
   }, []);
+
+  useEffect(() => {
+    const param = searchParams.get("category");
+    if (param) setSelectedCategory(param);
+  }, [searchParams]);
+
   const handleCategoryChange = (code) => {
     setSelectedCategory(code);
+    router.push({ pathname: "/kiosk", query: { category: code } });
   };
 
   const filteredItems = items.filter((item) => {
