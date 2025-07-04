@@ -54,7 +54,7 @@ html.font_69{font-size:69%;}
     display: flex;flex-direction: column;min-height:100vh;
 }
 #header{
-    position:fixed;z-index:1000;left:0;top:0;width:100%;padding:70px 40px 0;
+    position:absolute;z-index:1000;left:0;top:0;width:100%;padding:70px 40px 0;
     .header_inner {
         position: relative;;padding:25px 30px;display:flex;align-items: center;background-color: #fff;border-radius:10px;box-shadow:0 0 15px rgba(0,0,0,.1);
         #logo {
@@ -132,4 +132,7 @@ html.font_69{font-size:69%;}
 
 #content{
     flex:1 1 auto;
+}
+#sub_content{
+    margin-top:50px;margin-bottom:180px;
 }

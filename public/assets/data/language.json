@@ -161,6 +161,20 @@
         "EN": "Projects by elTOV"
     },
     {
+        "code": "키오스크hw타이틀",
+        "KO": "키오스크 H/W",
+        "JP": "キオスクH/W",
+        "CH": "亭硬件",
+        "EN": "Kiosk H/W"
+    },
+    {
+        "code": "키오스크hw서브타이틀",
+        "KO": "키오스크 하드웨어 소개",
+        "JP": "キオスクハードウェア紹介",
+        "CH": "亭硬件介绍",
+        "EN": "Kiosk Hardware Introduction"
+    },
+    {
         "code": "회사명엘토브",
         "KO": "(주)엘토브",
         "JP": "株式会社エルトブ",
@@ -189,10 +203,10 @@
         "EN": "Contact"
     },
     {
-        "code": "카테고리타이틀",
-        "KO": "카테고리",
-        "JP": "カテゴリ",
-        "CH": "类别",
-        "EN": "Category"
+        "code": "분류선택",
+        "KO": "분류 선택",
+        "JP": "カテゴリを選択",
+        "CH": "选择分类",
+        "EN": "Select Category"
     }
 ]

@@ -1,0 +1,20 @@
+.category_tap{
+    margin-bottom:30px;
+    h3{
+        font-size:2.6rem;font-weight:700;margin-bottom:15px;
+    }
+    ul{
+        display:flex;align-items: center;gap:25px;
+        li{
+            a{
+                display: block;color:#777;font-size:1.7rem;border-bottom:2px solid transparent;padding:3px 0;
+                &:hover{
+                    color:#000;
+                }
+                &.active{
+                    color:#000;border-color:#000;text-shadow: 0 0 5px rgba(0,0,0,.15);
+                }
+            }
+        }
+    }
+}
