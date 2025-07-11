@@ -1,0 +1,78 @@
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+fieldset, legend,
+button, input, textarea,
+th, td {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default border */
+fieldset, img {
+    border: 0;
+}
+html{
+    font-size:62.5%;
+}
+/* Set base font */
+body {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.5;
+    background: #fff;
+    color: #222;
+}
+/* Remove link underline */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Table resets */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+button,label{
+    cursor: pointer;
+}
+/* Button and input resets */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    outline: none;
+    appearance: none;
+}
+
+/* Image max width */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* HTML5 elements display block */
+article, aside, details, figcaption, figure,
+footer, header, main, nav, section, summary {
+    display: block;
+}

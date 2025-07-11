@@ -1,0 +1,41 @@
+.gall_list{
+    ul{
+        display:grid;grid-template-columns:repeat(3,1fr);gap:35px 25px;
+        li{
+            a{
+                display: block;
+                &:hover{
+                    .thum{
+                        img{
+                            transform:translate(-50%,-50%) scale(1.1);opacity: 0.8;
+                        }
+                    }
+                }
+            }
+            .thum{
+                border-radius: 10px;overflow: hidden;position: relative;padding-top:65%;background-color: #efece9;
+                &::before{
+                    content:"";position: absolute;z-index:1;left:0;top:0;width:100%;height: 100%;background-position: center center;background-repeat: no-repeat;background-image: url('/assets/images/logo_ci.svg');background-size: 50px;filter: grayscale(1);opacity:0.6
+                }
+                img{
+                    width:100%;height:auto;position: absolute;z-index:5;top:50%;left:50%;transform: translate(-50%,-50%);object-fit: cover;transition:transform .3s;
+                }
+            }
+            .cnt{
+                margin-top:10px;
+                .tit{
+                    font-size:1.8rem;font-weight:700;
+                    & + .desc{
+                        margin-top:3px;
+                    }
+                }
+                .desc{
+                    font-size:1.5rem;color:#777;line-height: 1.3;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
+                }
+                .date{
+                    font-size:1.3rem;color:#777;display: block;margin-top:5px;
+                }
+            }
+        }
+    }
+}

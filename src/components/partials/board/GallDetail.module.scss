@@ -1,0 +1,30 @@
+
+.detail_wrap{
+    display: flex;gap:80px;
+    .detail_files{
+        width:50%;
+        .images{
+            .item{
+                img{
+                    width:100%;height:auto;
+                }
+            }
+        }
+        .videos{
+            .item{
+                video{
+                    width:100%;height:auto;
+                }
+            }
+        }
+    }
+    .detail_content{
+        position: sticky;top:60px;
+        h2{
+            font-size:5rem;font-weight:700;margin-bottom:15px;color:#000;
+        }
+        p{
+            font-size:2.5rem;color:#222;line-height: 1.3;
+        }
+    }
+}

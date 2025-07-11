@@ -1,0 +1,10 @@
+.main_visual{
+  background-color: #000;
+  video{
+    width: 100%;height: 100vh;object-fit: cover;display:block;
+    filter: 
+    contrast(1.2)
+    saturate(1.5)
+    brightness(0.8);
+  }
+}

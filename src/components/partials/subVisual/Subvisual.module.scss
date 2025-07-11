@@ -1,0 +1,23 @@
+.sub_page_title {
+    position: relative;padding: 400px 40px 300px;background-size: cover;background-attachment: fixed;background-position: center top;color: #fff;text-align: center;
+    .title_texts{
+        animation: slideDownFadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
+        h2{
+            font-size:5rem;text-shadow: 0 0 10px rgba(0,0,0,.2);
+        }
+        .sub {
+            font-size: 3rem;text-shadow: 0 0 8px rgba(0,0,0,.15);
+        }
+    }
+}
+
+@keyframes slideDownFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

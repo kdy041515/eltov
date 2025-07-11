@@ -1,0 +1,220 @@
+[
+    {
+        "code": "메뉴air",
+        "KO": "에어",
+        "JP": "エアー",
+        "CH": "空气",
+        "EN": "AIR"
+    },
+    {
+        "code": "메뉴kiosk",
+        "KO": "배리어프리 키오스크",
+        "JP": "バリアフリーキオスク",
+        "CH": "无障碍亭",
+        "EN": "Barrier Free Kiosk"
+    },
+    {
+        "code": "메뉴way",
+        "KO": "길찾기",
+        "JP": "ウェイファインディング",
+        "CH": "导向",
+        "EN": "Wayfinding"
+    },
+    {
+        "code": "메뉴media",
+        "KO": "영상 랜드마크",
+        "JP": "メディアランドマーク",
+        "CH": "媒体地标",
+        "EN": "Media Landmark"
+    },
+    {
+        "code": "메뉴hw",
+        "KO": "키오스크 H/W",
+        "JP": "キオスクH/W",
+        "CH": "亭硬件",
+        "EN": "Kiosk H/W"
+    },
+    {
+        "code": "메뉴portfolio",
+        "KO": "포트폴리오",
+        "JP": "リファレンス",
+        "CH": "参考",
+        "EN": "portfolio"
+    },
+    {
+        "code": "메뉴about",
+        "KO": "회사소개",
+        "JP": "会社概要",
+        "CH": "关于我们",
+        "EN": "About us"
+    },
+    {
+        "code": "메뉴singapore",
+        "KO": "엘토브 싱가포르",
+        "JP": "elTOVシンガポール",
+        "CH": "elTOV新加坡",
+        "EN": "elTOV Singapore"
+    },
+    {
+        "code": "접근성고대비",
+        "KO": "고대비",
+        "JP": "ハイコントラスト",
+        "CH": "高对比度",
+        "EN": "High Contrast"
+    },
+    {
+        "code": "접근성낮은자세",
+        "KO": "낮은자세",
+        "JP": "低い姿勢",
+        "CH": "低姿势",
+        "EN": "Low Posture"
+    },
+    {
+        "code": "접근성음성크기",
+        "KO": "음성크기",
+        "JP": "音声の大きさ",
+        "CH": "语音音量",
+        "EN": "Voice Volume"
+    },
+    {
+        "code": "접근성음성속도",
+        "KO": "음성속도",
+        "JP": "音声速度",
+        "CH": "语音速度",
+        "EN": "Voice Speed"
+    },
+    {
+        "code": "접근성글씨크기",
+        "KO": "글씨크기",
+        "JP": "文字サイズ",
+        "CH": "字体大小",
+        "EN": "Font Size"
+    },
+    {
+        "code": "고대비",
+        "KO": "고대비",
+        "JP": "ハイコントラスト",
+        "CH": "高对比度",
+        "EN": "High Contrast"
+    },
+    {
+        "code": "낮은자세",
+        "KO": "낮은자세",
+        "JP": "低い姿勢",
+        "CH": "低姿势",
+        "EN": "Low Posture"
+    },
+    {
+        "code": "음성크기",
+        "KO": "음성크기",
+        "JP": "音声の大きさ",
+        "CH": "语音音量",
+        "EN": "Voice Volume"
+    },
+    {
+        "code": "음성속도",
+        "KO": "음성속도",
+        "JP": "音声速度",
+        "CH": "语音速度",
+        "EN": "Voice Speed"
+    },
+    {
+        "code": "글씨크기",
+        "KO": "글씨크기",
+        "JP": "文字サイズ",
+        "CH": "字体大小",
+        "EN": "Font Size"
+    },
+    {
+        "code": "켜짐",
+        "KO": "켜짐",
+        "JP": "オン",
+        "CH": "开",
+        "EN": "On"
+    },
+    {
+        "code": "꺼짐",
+        "KO": "꺼짐",
+        "JP": "オフ",
+        "CH": "关",
+        "EN": "Off"
+    },
+    {
+        "code": "엘토브고객사",
+        "KO": "엘토브 고객사",
+        "JP": "elTOV 顧客",
+        "CH": "elTOV 客户",
+        "EN": "elTOV Clients"
+    },
+    {
+        "code": "포트폴리오타이틀",
+        "KO": "포트폴리오",
+        "JP": "リファレンス",
+        "CH": "参考",
+        "EN": "portfolio"
+    },
+    {
+        "code": "포트폴리오서브타이틀",
+        "KO": "엘토브의 프로젝트 사례",
+        "JP": "エルトブのプロジェクト事例",
+        "CH": "elTOV 项目案例",
+        "EN": "Projects by elTOV"
+    },
+    {
+        "code": "키오스크hw타이틀",
+        "KO": "키오스크 H/W",
+        "JP": "キオスクH/W",
+        "CH": "亭硬件",
+        "EN": "Kiosk H/W"
+    },
+    {
+        "code": "키오스크hw서브타이틀",
+        "KO": "키오스크 하드웨어 소개",
+        "JP": "キオスクハードウェア紹介",
+        "CH": "亭硬件介绍",
+        "EN": "Kiosk Hardware Introduction"
+    },
+    {
+        "code": "회사명엘토브",
+        "KO": "(주)엘토브",
+        "JP": "株式会社エルトブ",
+        "CH": "（株）elTOV",
+        "EN": "elTOV Co., Ltd."
+    },
+    {
+        "code": "대표자명",
+        "KO": "대표: 김지성 김지훈",
+        "JP": "代表：キム・ジソン、キム・ジフン",
+        "CH": "代表：金智成、金智勋",
+        "EN": "CEO: Jisung Kim, Jihoon Kim"
+    },
+    {
+        "code": "사업자번호",
+        "KO": "사업자번호",
+        "JP": "事業者番号",
+        "CH": "营业执照号",
+        "EN": "Business Registration Number"
+    },
+    {
+        "code": "연락처",
+        "KO": "연락처",
+        "JP": "連絡先",
+        "CH": "联系方式",
+        "EN": "Contact"
+    },
+    {
+        "code": "분류선택",
+        "KO": "분류 선택",
+        "JP": "カテゴリを選択",
+        "CH": "选择分类",
+        "EN": "Select Category"
+    }
+    ,
+     {
+        "code": "전체",
+        "KO": "전체",
+        "JP": "すべて",
+        "CH": "全部",
+        "EN": "All"
+    }
+]
