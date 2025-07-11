@@ -1,8 +1,7 @@
 "use client";
 import Link from "next/link";
 import styles from "./GallList.module.scss";
-import useTranslate from "@/hooks/useTranslate";
-import { useStore } from "../../../store/useStore";
+import { useStore } from "@/store/useStore";
 
 export default function GallList({ items, linkPrefix = "" }) {
   const language = useStore((state) => state.language);
@@ -13,7 +12,7 @@ export default function GallList({ items, linkPrefix = "" }) {
           <li key={idx}>
             <Link href={linkPrefix ? `${linkPrefix}/${item.id}` : "#"}>
               <div className={styles.thum}>
-                <img src={item.thum_url} />
+                <img src={item.thum_url} onError={(e) => (e.target.style.display = "none")}/>
               </div>
               <div className={styles.cnt}>
                 <div className={styles.tit}>
@@ -33,6 +32,9 @@ export default function GallList({ items, linkPrefix = "" }) {
                       : language === "jp"
                         ? item.description_jp
                         : item.description_cn}
+                </div>
+                <div className={styles.date}>
+                  {new Date(item.createdAt.seconds * 1000).toISOString().split('T')[0].slice(2)}
                 </div>
               </div>
             </Link>

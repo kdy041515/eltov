@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import styles from "./CategoryList.module.scss";
 import { useStore } from "../../../store/useStore";
 import useTranslate from "@/hooks/useTranslate";
@@ -16,22 +15,22 @@ export default function CategoryList({
       <h3>{translate("분류선택")}</h3>
       <ul>
         <li>
-          <Link
-            href="#"
-            className={selectedCategory === "전체" ? "active" : ""}
+          <a
+            href="javacript:;"
+            className={selectedCategory === "전체" ? styles.active : ""}
             onClick={(e) => {
               e.preventDefault();
               handleCategoryChange("전체");
             }}
           >
             {translate("전체")}
-          </Link>
+          </a>
         </li>
         {categories.map((category, index) => (
           <li key={index}>
-            <Link
-              href="#"
-              className={category.code === selectedCategory ? "active" : ""}
+            <a 
+              href="javacript:;"
+              className={category.code === selectedCategory ? styles.active : ""}
               onClick={(e) => {
                 e.preventDefault();
                 handleCategoryChange(category.code);
@@ -44,7 +43,7 @@ export default function CategoryList({
                   : language === "jp"
                     ? category.jp
                     : category.ch}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

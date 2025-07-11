@@ -11,7 +11,6 @@ export default function KioskList() {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("전체");
-  const translate = useTranslate();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -25,9 +24,9 @@ export default function KioskList() {
     if (param) setSelectedCategory(param);
   }, [searchParams]);
 
-  const handleCategoryChange = (code) => {
-    setSelectedCategory(code);
-    router.push({ pathname: "/kiosk", query: { category: code } });
+  const handleCategoryChange = (category) => {
+    const href = `/kiosk?category=${encodeURIComponent(category)}`;
+    window.history.pushState({}, '', href);
   };
 
   const filteredItems = items.filter((item) => {

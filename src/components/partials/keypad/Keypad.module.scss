@@ -6,6 +6,7 @@
     .status_btns {
         display: flex;align-items: center;gap:10px;
         .item {
+            position: relative;
             button {
                 display: flex;align-items: center;background-color: rgba(0,0,0,.84);color:#fff;font-size:1.6rem;white-space:nowrap;border-radius:5px;padding:8px 10px;line-height: 1;box-shadow:0 0 10px rgba(0,0,0,.3);
                 svg {
@@ -19,8 +20,10 @@
                 }
             }
             .select_option {
+                position: absolute;bottom:35px;left:0;min-width:100%;border-radius:5px;overflow:hidden;
                 li {
                     button {
+                        width:100%;justify-content: center;border-radius:0;
                     }
                 }
             }

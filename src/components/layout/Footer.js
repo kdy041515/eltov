@@ -16,7 +16,7 @@ export default function Footer() {
                         <li><Link href="#">{translate("메뉴kiosk")}</Link></li>
                         <li><Link href="#">{translate("메뉴way")}</Link></li>
                         <li><Link href="#">{translate("메뉴media")}</Link></li>
-                        <li><Link href="#">{translate("메뉴hw")}</Link></li>
+                        <li><Link href="/kiosk">{translate("메뉴hw")}</Link></li>
                         <li><Link href="/portfolio">{translate("메뉴portfolio")}</Link></li>
                         <li><Link href="#">{translate("메뉴about")}</Link></li>
                     </ul>
