@@ -7,7 +7,9 @@ import CategoryList from "@/components/partials/board/CategoryList";
 import GallList from "@/components/partials/board/GallList";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function KioskList() {
+import { Suspense } from "react";
+
+function KioskListContent() {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("전체");
@@ -52,5 +54,13 @@ export default function KioskList() {
         </div>
       </div>
     </>
+  );
+}
+
+export default function KioskList() {
+  return (
+    <Suspense fallback={null}>
+      <KioskListContent />
+    </Suspense>
   );
 }
