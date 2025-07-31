@@ -4,7 +4,7 @@ import { getPortfolios, getPortfolioCategories } from "@/firebase/firestore";
 import SubVisual from "@/components/partials/subVisual/SubVisual";
 import CategoryList from "@/components/partials/board/CategoryList";
 import GallList from "@/components/partials/board/GallList";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 import { Suspense } from "react";
@@ -14,7 +14,6 @@ function PortfolioListContent() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("전체");
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     getPortfolios()
@@ -26,15 +25,17 @@ function PortfolioListContent() {
     getPortfolioCategories()
       .then((data) => {
         setCategories(data);
-        const param = searchParams.get("category");
+        const params = new URLSearchParams(window.location.search);
+        const param = params.get("category");
         setSelectedCategory(param || "전체");
       })
       .catch(console.error);
-  }, [searchParams]);
+  }, []);
 
   const handleCategoryChange = (category) => {
     const href = `/portfolio?category=${encodeURIComponent(category)}`;
-    window.history.pushState({}, '', href);
+    router.push(href);
+    setSelectedCategory(category);
   };
 
   const filteredItems = items.filter((item) => {

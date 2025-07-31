@@ -5,7 +5,7 @@ import useTranslate from "@/hooks/useTranslate";
 import SubVisual from "@/components/partials/subVisual/SubVisual";
 import CategoryList from "@/components/partials/board/CategoryList";
 import GallList from "@/components/partials/board/GallList";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 import { Suspense } from "react";
 
@@ -14,7 +14,6 @@ function KioskListContent() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("전체");
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     getKiosks().then(setItems).catch(console.error);
@@ -22,13 +21,15 @@ function KioskListContent() {
   }, []);
 
   useEffect(() => {
-    const param = searchParams.get("category");
+    const params = new URLSearchParams(window.location.search);
+    const param = params.get("category");
     if (param) setSelectedCategory(param);
-  }, [searchParams]);
+  }, []);
 
   const handleCategoryChange = (category) => {
     const href = `/kiosk?category=${encodeURIComponent(category)}`;
-    window.history.pushState({}, '', href);
+    router.push(href);
+    setSelectedCategory(category);
   };
 
   const filteredItems = items.filter((item) => {
