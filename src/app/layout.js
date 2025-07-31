@@ -4,6 +4,7 @@ import Keypad from '../components/partials/keypad/Keypad';
 import Clients from '../components/partials/client/Clients';
 import AccessibilityManager from '../components/AccessibilityManager';
 import AuthProvider from './providers/AuthProvider';
+import { Suspense } from 'react';
 import '@/styles/reset.scss';
 import '@/styles/style.scss';
 
@@ -29,7 +30,9 @@ export default async function RootLayout({ children }) {
                         <div id="layout">
                             {<Header/>}
                             <div id="content">
-                                {children}
+                                <Suspense fallback={null}>
+                                    {children}
+                                </Suspense>
                             </div>
                             {<Keypad/>}
                             {<Clients/>}
