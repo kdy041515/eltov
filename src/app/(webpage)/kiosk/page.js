@@ -37,17 +37,19 @@ export default function KioskList() {
   return (
     <>
       <SubVisual
-        image="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
-        titleCode="메뉴kiosk"
-        subtextCode="메뉴kiosk"
+        image="/assets/images/subvisual/subvisual_kioskhw.jpg"
+        titleCode="키오스크hw타이틀"
+        subtextCode="키오스크hw서브타이틀"
       />
-      <div id="sub_content" className="container">
-        <CategoryList
-          categories={categories}
-          selectedCategory={selectedCategory}
-          handleCategoryChange={handleCategoryChange}
-        />
-        <GallList items={filteredItems} linkPrefix="/kiosk" />
+      <div id="sub_content" className="container sub_round">
+        <div className="round_inner">
+          <CategoryList
+            categories={categories}
+            selectedCategory={selectedCategory}
+            handleCategoryChange={handleCategoryChange}
+          />
+          <GallList items={filteredItems} linkPrefix="/kiosk" />
+        </div>
       </div>
     </>
   );

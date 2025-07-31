@@ -3,6 +3,7 @@ import Footer from '../components/layout/Footer';
 import Keypad from '../components/partials/keypad/Keypad';
 import Clients from '../components/partials/client/Clients';
 import AccessibilityManager from '../components/AccessibilityManager';
+import AuthProvider from './providers/AuthProvider';
 import '@/styles/reset.scss';
 import '@/styles/style.scss';
 
@@ -23,17 +24,19 @@ export default async function RootLayout({ children }) {
             <html lang="ko">
                 {/* MEMO: suppressHydrationWarning={true} 추가하면 extention의 불필요한 코드를 막음 */}
                 <body suppressHydrationWarning={true}>
-                    <AccessibilityManager />
-                    <div id="layout">
-                        {<Header/>}
-                        <div id="content">
-                            {children}
+                    <AuthProvider>
+                        <AccessibilityManager />
+                        <div id="layout">
+                            {<Header/>}
+                            <div id="content">
+                                {children}
+                            </div>
+                            {<Keypad/>}
+                            {<Clients/>}
+                            {<Footer/>}
                         </div>
-                        {<Keypad/>}
-                        {<Clients/>}
-                        {<Footer/>}
-                    </div>
-                    <div id="portal"></div>
+                        <div id="portal"></div>
+                    </AuthProvider>
                 </body>
             </html>
         </>

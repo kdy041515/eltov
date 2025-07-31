@@ -24,16 +24,16 @@
             .cnt{
                 margin-top:10px;
                 .tit{
-                    font-size:1.8rem;font-weight:700;
+                    font-size:2rem;font-weight:700;
                     & + .desc{
                         margin-top:3px;
                     }
                 }
                 .desc{
-                    font-size:1.5rem;color:#777;line-height: 1.3;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
+                    font-size:1.7rem;color:#777;line-height: 1.3;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
                 }
                 .date{
-                    font-size:1.3rem;color:#777;display: block;margin-top:5px;
+                    font-size:1.4rem;color:#777;display: block;margin-top:5px;
                 }
             }
         }

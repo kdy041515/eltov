@@ -44,3 +44,27 @@ export async function addContact(data) {
     createdAt: serverTimestamp(),
   });
 }
+
+
+export async function uploadBoardContent(boardName, data) {
+  const image_urls = [];
+  for (let file of data.images || []) {
+    if (!file) continue;
+    const path = `${boardName}/${Date.now()}_${file.name}`;
+    const refStorage = ref(storage, path);
+    await uploadBytes(refStorage, file);
+    image_urls.push(await getDownloadURL(refStorage));
+  }
+
+  const thum_url = image_urls[0] || '';
+
+  const payload = {
+    ...data,
+    image_urls,
+    thum_url,
+    createdAt: serverTimestamp(),
+  };
+
+  const docRef = await addDoc(collection(db, boardName), payload);
+  return docRef.id;
+}

@@ -5,10 +5,15 @@ import useTranslate from '@/hooks/useTranslate';
 
 export default function SubVisual({ image, titleCode, subtextCode }) {
   const translate = useTranslate();
+
+  const backgroundStyle = image
+    ? { backgroundImage: `url('${image}')`}
+    : {};
+
     return (
         <div
             className={styles.sub_page_title}
-            style={{ backgroundImage: `url('${image}')` }}
+            style={backgroundStyle}
         >
             <div className={styles.title_texts}>
                 <h2>{translate(titleCode)}</h2>

@@ -5,6 +5,7 @@ import SubVisual from "@/components/partials/subVisual/SubVisual";
 import CategoryList from "@/components/partials/board/CategoryList";
 import GallList from "@/components/partials/board/GallList";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 export default function PortfolioList() {
   const [items, setItems] = useState([]);
@@ -42,7 +43,7 @@ export default function PortfolioList() {
   return (
     <>
       <SubVisual
-        image="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
+        image="/assets/images/subvisual/subvisual_portfolio.jpg"
         titleCode="포트폴리오타이틀"
         subtextCode="포트폴리오서브타이틀"
       />
@@ -52,6 +53,12 @@ export default function PortfolioList() {
           selectedCategory={selectedCategory}
           handleCategoryChange={handleCategoryChange}
         />
+
+        <div className="list_btns">
+          <div className="right">
+            <Link href="/portfolio/regist" className="btn">게시글 등록</Link>
+          </div>
+        </div>
         <GallList items={filteredItems} linkPrefix="/portfolio" />
       </div>
     </>

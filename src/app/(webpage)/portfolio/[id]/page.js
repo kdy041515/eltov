@@ -18,7 +18,7 @@ export default function PortfolioDetail() {
   return (
     <>
       <SubVisual
-        image="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
+        image="/assets/images/subvisual/subvisual_portfolio.jpg"
         titleCode="포트폴리오타이틀"
         subtextCode="포트폴리오서브타이틀"
       />

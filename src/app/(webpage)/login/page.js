@@ -1,46 +1,76 @@
-"use client";
-import { useEffect, useState } from "react";
-import SubVisual from "@/components/partials/subVisual/SubVisual";
-import { useForm } from "react-hook-form";
-import { addContact } from '@/firebase/firestore';
+'use client';
+
+import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import SubVisual from '@/components/partials/subVisual/SubVisual';
+import useTranslate from '@/hooks/useTranslate';
+
+import { auth } from '@/firebase/firebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function Login() {
-    const translate = useTranslate();
-    const { register, handleSubmit, reset } = useForm();
+  const translate = useTranslate();
+  const { register, handleSubmit, reset } = useForm();
+  const router = useRouter();
 
-    const onSubmit = async (data) => {
-        await addContact(data);
-        alert('submitted');
-        reset();
-    };
+  const onSubmit = async data => {
+    try {
+      const email = data.id;
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        data.password
+      );
+      console.log('로그인 성공:', userCredential.user);
+
+      alert('로그인 되었습니다.');
+      reset();
+      router.push('/');
+    } catch (e) {
+      console.error('로그인 오류', e.code, e.message);
+      alert('로그인 실패: ' + e.message);
+    }
+  };
 
   return (
     <>
       <SubVisual
-        image="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
         titleCode="로그인"
-        subtextCode="엘토브 담당자를 위한 시스템입니다.<br/>불법 사용 시 법적 제재를 받을 수 있습니다."
+        subtextCode="엘토브_담당자를_위한_시스템입니다"
       />
-      <div id="sub_content" className="container">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form">
-            <div className="item">
-              <div className="tit">{translate("아이디")}</div>
-              <div className="input">
-                <input type="text" {...register("id")} />
+
+      <div id="sub_content" className="container container_xs sub_round">
+        <div className="round_inner">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form_items">
+              <div className="item">
+                <div className="tit">{translate('아이디')}</div>
+                <div className="input">
+                  <input
+                    type="text"
+                    {...register('id', { required: true })}
+                  />
+                </div>
+              </div>
+
+              <div className="item">
+                <div className="tit">{translate('비밀번호')}</div>
+                <div className="input">
+                  <input
+                    type="password"
+                    {...register('password', { required: true })}
+                  />
+                </div>
               </div>
             </div>
-            <div className="item">
-              <div className="tit">{translate("비밀번호")}</div>
-              <div className="input">
-                <input type="password" {...register("password")} />
-              </div>
+
+            <div className="form_btns">
+              <button type="submit" className="submit">
+                {translate('로그인')}
+              </button>
             </div>
-          </div>
-          <div className="form_btns">
-            <button type="submit">{translate("로그인")}</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </>
   );
