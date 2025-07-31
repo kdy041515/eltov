@@ -12,8 +12,8 @@ export default function GallDetail({ item }) {
             {item.image_urls && 
                 <div className={styles.images}>
                 {item.image_urls?.map((src, idx) => (
-                    <div className={styles.item}>
-                        <img key={idx} src={src} alt="" />
+                    <div className={styles.item} key={idx}>
+                        <img src={src} alt="" />
                     </div>
                 ))}
                 </div>
@@ -21,8 +21,8 @@ export default function GallDetail({ item }) {
             {item.video_urls && 
                 <div className={styles.videos}>
                 {item.image_urls?.map((src, idx) => (
-                    <div className={styles.item}>
-                        <video key={idx} src={src}></video>
+                    <div className={styles.item} key={idx}>
+                        <video src={src}></video>
                     </div>
                 ))}
                 </div>
