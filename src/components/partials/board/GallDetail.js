@@ -20,7 +20,7 @@ export default function GallDetail({ item }) {
             }
             {item.video_urls && 
                 <div className={styles.videos}>
-                {item.image_urls?.map((src, idx) => (
+                {item.video_urls?.map((src, idx) => (
                     <div className={styles.item} key={idx}>
                         <video src={src}></video>
                     </div>
