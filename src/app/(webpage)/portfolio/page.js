@@ -7,7 +7,9 @@ import GallList from "@/components/partials/board/GallList";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function PortfolioList() {
+import { Suspense } from "react";
+
+function PortfolioListContent() {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("전체");
@@ -62,5 +64,13 @@ export default function PortfolioList() {
         <GallList items={filteredItems} linkPrefix="/portfolio" />
       </div>
     </>
+  );
+}
+
+export default function PortfolioList() {
+  return (
+    <Suspense fallback={null}>
+      <PortfolioListContent />
+    </Suspense>
   );
 }
